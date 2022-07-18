@@ -49,15 +49,13 @@ def main():
             except:
                 while True:
                     count += 1
-                    print(count)
-                    split_name = file.split(".") # TODO Fix this bug by finding a more flexible way to split filenames
+                    split_name = file.split(".")
                     split_name.insert(-1, str(count))
-                    print(split_name)
-                    new_name = "".join(split_name[0:-1]) + "." + split_name[-1]
+                    new_name = "-".join(split_name[0:-1]) + "." + split_name[-1]
                     if not exists(f"{extention}/{new_name}"):
                         break
                     else:
-                        count += 1
+                        continue
                 print(f"The file {file} already exists! Renaming it to: {new_name}")
                 rename(file, new_name)
                 file = new_name
