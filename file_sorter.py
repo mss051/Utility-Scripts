@@ -5,7 +5,7 @@
     Made by Massimo Sabba
 """
 
-from os.path import isdir, isfile, exists
+from os.path import isdir, exists
 from os import listdir, mkdir, rename
 from shutil import move
 
