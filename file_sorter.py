@@ -14,7 +14,7 @@ extentions = []
 grouped = {}
 filtered_files = []
 
-def main():
+def file_sorter():
     # Filter out folders and this program from the list of files
     for file in files:
         if file.endswith(".py"):
@@ -62,4 +62,4 @@ def main():
                 move(file, extention)
 
 if __name__ == '__main__':
-    main()
+    file_sorter()
